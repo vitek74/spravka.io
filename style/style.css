@@ -4,14 +4,29 @@ body {
 }
 
 .menu {
-    width: 30%;
-    float: left;
-     background: #222175 ;
-    color: #ebdda4;
-    font-size: 18px;
+    width: 25%;
+   position: fixed;
+    
+     background: #AFEEEE;
+    color: #000000;
+    font-size: 24px;
+    
+    
+   
 }
 
 .content {
-    
-    background: #84bbff;
+    float: right;
+   width: 74%;
+    background: #F0FFF0;
+    font-size: 21px;
+}
+
+.nav {
+    text-decoration: none;
+}
+
+.nav:hover {
+    background-color: #008B8B;
+    color: #FFF8DC;
 }
