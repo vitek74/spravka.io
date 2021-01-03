@@ -1,0 +1,15 @@
+body {
+    
+    font-family: Tahoma, sans-serif;
+}
+
+.menu {
+    width: 30%;
+    float: left;
+     background: #73ff5d;
+}
+
+.content {
+    
+    background: #84bbff;
+}
