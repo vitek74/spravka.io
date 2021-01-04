@@ -1,25 +1,61 @@
 body {
-    
+
     font-family: Tahoma, sans-serif;
+    background-color: #FAEBD7;
 }
+
+h1 {
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+    font-size: 26px;
+}
+
+h6 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 24px;
+    color: #006400;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    
+    background: #0000FF;
+    color: #FFFF00;
+}
+
+big {
+    color: #FF0000;
+
+}
+
 
 .menu {
     width: 25%;
-   position: fixed;
-    
-     background: #AFEEEE;
+    position: fixed;
+
+    background: #AFEEEE;
     color: #000000;
     font-size: 24px;
-    
-    
-   
+
+
+
 }
 
 .content {
     float: right;
-   width: 74%;
+    width: 74%;
     background: #F0FFF0;
     font-size: 21px;
+    line-height: 1,4;
 }
 
 .nav {
@@ -29,4 +65,29 @@ body {
 .nav:hover {
     background-color: #008B8B;
     color: #FFF8DC;
+}
+
+
+.one {
+    width: 33%;
+    float: left;
+
+    margin-top: 10px;
+    text-align: center;
+}
+
+.three {
+    width: 33%;
+    float: right;
+
+    margin-top: 10px;
+    text-align: center;
+}
+
+.two {
+    width: 34%;
+    float: left;
+
+    margin-top: 10px;
+    text-align: center;
 }
