@@ -36,11 +36,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
 
-    background: #0000FF;
-    color: #FFFF00;
-}
 
 big {
     color: #FF0000;
@@ -102,8 +98,6 @@ big {
     margin-top: 10px;
     text-align: left;
 }
-
-
 
 
 

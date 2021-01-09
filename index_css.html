@@ -43,26 +43,26 @@
                 CSS </h1>
         </header>
 
-<form name="contact" method="POST" data-netlify="true">
-  <p>
-    <label>Ваше Имя: <input type="text" name="name" /></label>   
-  </p>
-  <p>
-    <label>№ участка <input type="text" name="text" /></label>
-  </p>
-  <p>
-    <label>Кем вы являетесь <select name="role[]" multiple>
-      <option value="членНСТ">Членом НСТ</option>
-      <option value="Собственник">Собственником</option>
-    </select></label>
-  </p>
-  <p>
-    <label>Ваши проблемы, <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Отправить</button>
-  </p>
-</form>
+        <form class="form" name="contact" method="POST" data-netlify="true">
+            <fieldset >
+                <legend>Обратная связь</legend>
+                <p>
+                    <label class="name">Ваше Имя: <input type="text" name="name" /></label>
+                </p>
+
+                <p>
+                    <label class="name">№ участка <input type="text" name="text" /></label>
+                </p>
+
+                <p>
+                    <label class="name">Сообщение <textarea name="message"></textarea></label>
+                </p>
+
+                <p>
+                    <button type="submit">Отправить</button>
+                </p>
+            </fieldset>
+        </form>
 
 
 
