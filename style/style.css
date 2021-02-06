@@ -2,7 +2,7 @@ body {
 
     font-family: Tahoma, sans-serif;
     background-color: #FAEBD7;
-    
+
 }
 
 .header {
@@ -62,7 +62,7 @@ big {
     width: 74%;
     background: #F0FFF0;
     font-size: 21px;
-    
+
 }
 
 .nav {
@@ -86,7 +86,7 @@ big {
 .three {
     width: 31%;
     float: right;
-
+    margin-left: 10px;
     margin-top: 10px;
     text-align: left;
 }
@@ -94,7 +94,7 @@ big {
 .two {
     width: 32%;
     float: left;
-
+    margin-left: 10px;
     margin-top: 10px;
     text-align: left;
 }
