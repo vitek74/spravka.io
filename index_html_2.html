@@ -32,7 +32,7 @@
             <code><b>&lt;details open="open"&gt;<br>
                     &lt;summary&gt;Тут что-то есть.&lt;/summary&gt;<br>
                     &lt;p&gt; - Здесь могло быть, что-нибудь интересное.&lt;/p&gt;<br>
-                    &lt;/details&gt;</b></code>
+                    &lt;/details&gt;</b></code><hr>
 
             <p>menu</p>
             <big>label:</big><br>
@@ -41,8 +41,28 @@
             Определяет какой тип меню будет отображен на экране:<br>
             <b>context</b> - контекстное меню с командами, с которомы может взаимодействовать пользователь.<br>
             <b>toolbar</b> - список активных команд<br>
-            <b>list</b> - неупорядоченный список элементов (каждый элемент такого списка создается с помощью тега li). Значение list используется по умолчанию.<br>
+            <b>list</b> - неупорядоченный список элементов (каждый элемент такого списка создается с помощью тега li). Значение list используется по умолчанию.<br><hr>
 
+            
+
+            <p>summary</p>
+            Тег <big>summary</big> должен идти первым внутри элемента <big>details</big>.<br>
+
+            <mark>Стиль по умолчанию</mark><br>
+            <code><b>summary {<br>
+                    display: block;<br>
+                    }</b></code><br>
+            <mark>Пример</mark><br>
+            <code><b>&lt;details open="open"&gt;<br>
+                    &lt;summary&gt;Тут что-то есть.&lt;/summary&gt;<br>
+                    &lt;p&gt; - Здесь могло быть, что-нибудь интересное.&lt;/p&gt;<br>
+                    &lt;/details&gt;</b></code><hr>
+
+
+        </div>
+        
+        <div class="two">
+            
             <mark>Стиль по умолчанию</mark><br>
             <code><b>menu {<br>
                     display: block;<br>
@@ -69,22 +89,8 @@
                     &lt;button type="button"<br> onclick="edit_paste()"&gt;Вставить&lt;/button&gt;<br>
                     &lt;/menu&gt;<br>
                     &lt;/li&gt;<br>
-                    &lt;/menu&gt; </b></code>
-
-            <p>summary</p>
-            Тег <big>summary</big> должен идти первым внутри элемента <big>details</big>.<br>
-
-            <mark>Стиль по умолчанию</mark><br>
-            <code><b>summary {<br>
-                    display: block;<br>
-                    }</b></code><br>
-            <mark>Пример</mark><br>
-            <code><b>&lt;details open="open"&gt;<br>
-                    &lt;summary&gt;Тут что-то есть.&lt;/summary&gt;<br>
-                    &lt;p&gt; - Здесь могло быть, что-нибудь интересное.&lt;/p&gt;<br>
-                    &lt;/details&gt;</b></code>
-
-
+                    &lt;/menu&gt; </b></code><hr>
+            
         </div>
 
     </div>

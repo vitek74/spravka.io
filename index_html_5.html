@@ -19,10 +19,613 @@
         </header>
 
         <div class="one">
+            <h6>Таблицы</h6>
+            <p>caption</p>
+            <big>caption - </big>По умолчанию, заголовок выводится над таблицей и выравнивается по центру. Для выравнивания заголовка по левому или правому краю используется CSS свойство text-align, так же имеется возможность выбрать, где будет располагаться заголовок, сверху или снизу таблицы, для этого используется свойство caption-side.<br>
+
+            <mark>Стиль по умолчанию</mark><br>
+            <code><b>caption {<br>
+                    display: table-caption;<br>
+                    text-align: center;<br>
+                    } </b></code><br>
+            <mark>Пример</mark><br>
+            <code><b>&lt;table border="1" style="width: 200px;"&gt;<br>
+                    &lt;caption&gt;Ежемесячные сбережения&lt;/caption&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;th>Месяц&lt;/th&gt;<br>
+                    &lt;th>Сбережения&lt;/th&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td>Декабрь&lt;/td&gt;<br>
+                    &lt;td>100р&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/table&gt;</b></code><br>
+            <table border="1" style="width: 200px;">
+                <caption>Ежемесячные сбережения</caption>
+                <tr>
+                    <th>Месяц</th>
+                    <th>Сбережения</th>
+                </tr>
+                <tr>
+                    <td>Декабрь</td>
+                    <td>100р</td>
+                </tr>
+            </table>
+            <hr>
+
+
+            <p>table</p>
+            <big>table - </big>по стандарту HTML5 все ранее используемые атрибуты таблицы, такие как align, bgcolor, border и т.д. больше не поддерживаются и их использование валидатор будет считать за ошибки в коде. Поэтому для стилизации таблиц нужно использовать CSS, с помощью которого можно заменить все атрибуты. Например, чтобы добавить рамку для таблицы используется свойство border, для изменения заднего фона - свойство background, а для выравнивания строчного содержимого в ячейках таблицы - свойства text-align и vertical-aling.<br>
+
+            <mark>Стиль по умолчанию</mark><br>
+            <code><b>table {<br>
+                    display: table;<br>
+                    border-collapse: separate;<br>
+                    border-spacing: 2px;<br>
+                    border-color: gray;<br>
+                    }</b></code><br>
+            <mark>Пример</mark><br>
+            <code><b>&lt;table&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;th&gt;Месяц&lt;/th&gt;<br>
+                    &lt;th&gt;Денег на счету&lt;/th&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Декабрь&lt;/td&gt;<br>
+                    &lt;td&gt;100р&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/table&gt; </b></code>
+            <table>
+                <tr>
+                    <th>Месяц</th>
+                    <th>Денег на счету</th>
+                </tr>
+                <tr>
+                    <td>Декабрь</td>
+                    <td>100р</td>
+                </tr>
+            </table>
+            <hr>
+
+            <p>tfoot:</p><br>
+            Браузеры могут использовать эти элементы для включения прокрутки тела таблицы, независимо от заголовка и нижнего колонтитула. Так же при выводе на печать большой таблицы, которая занимает несколько страниц, эти элементы могут включить заголовок и нижний колонтитул, которые будут напечатаны в верхней и нижней части каждой страницы.<br>
+
+            Элемент <big>tfoot</big> должен быть расположен после элементов <big>caption</big> и
+            <big>colgroup</big> (если таковые присутствуют) и <big>thead</big>, но до любого элемента <big>tbody</big>.
+            Элемент <big>tfoot</big> должен быть расположен перед элементом <big>tbody</big> в таблице, чтобы браузер мог отобразить нижний колонтитул перед обработкой всех строк с данными таблицы.<br>
+
+            <mark>Стиль по умолчанию</mark><br>
+            <code><b>tfoot {<br>
+                        display: table-footer-group;<br>
+                        vertical-align: middle;<br>
+                        border-color: inherit;<br>
+                    } </b></code><br>
+            <mark>Пример</mark><br>
+            <code><b>&lt;table border="1" style="width: 200px;"&gt;<br>
+                    &lt;caption&gt;Ежемесячные сбережения&lt;/caption&gt;<br>
+                    &lt;colgroup&gt;<br>
+                    &lt;col span="1" style="background-color: silver"&gt;<br>
+                    &lt;col style="background-color: #66FF99"&gt;<br>
+                    &lt;/colgroup&gt;<br>
+                    &lt;thead&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;th&gt;Месяц&lt;/th&gt;<br>
+                    &lt;th&gt;Доход&lt;/th&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/thead&gt;<br>
+                    &lt;tfoot&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Сумма&lt;/td&gt;<br>
+                    &lt;td&gt;180р&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/tfoot&gt;<br>
+                    &lt;tbody&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Январь&lt;/td&gt;<br>
+                    &lt;td&gt;100р&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Февраль&lt;/td&gt;<br>
+                    &lt;td&gt;80р&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/tbody&gt;<br>
+                    &lt;/table&gt; </b></code>
+            <table border="1" style="width: 200px;">
+                <caption>Ежемесячные сбережения</caption>
+                <colgroup>
+                    <col span="1" style="background-color: silver">
+                    <col style="background-color: #66FF99">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Месяц</th>
+                        <th>Доход</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td>Сумма</td>
+                        <td>180р</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>Январь</td>
+                        <td>100р</td>
+                    </tr>
+                    <tr>
+                        <td>Февраль</td>
+                        <td>80р</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <p>tr</p>
+            <big>tr - </big>все строки таблицы будут содержать такое же количество ячеек, которое содержится в самой длинной из всех строк. Браузер автоматически добавит пустые ячейки в строки с меньшим количеством ячеек.<br>
+
+            <mark>Стиль по умолчанию</mark><br>
+            <code><b>tr {<br>
+                    display: table-row;<br>
+                    vertical-align: inherit;<br>
+                    border-color: inherit;<br>
+                    }<br>
+                    Пример</b></code><br>
+            <mark>Пример</mark><br>
+            <code><b>&lt;table border="1"&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Ячейка 1&lt;/td&gt;<br>
+                    &lt;td&gt;Ячейка 2&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/table&gt;</b></code><br>
+            <table border="1">
+                <tr>
+                    <td>Ячейка 1</td>
+                    <td>Ячейка 2</td>
+                </tr>
+            </table>
+            <hr>
+
+
+        </div>
+
+        <div class="two">
+
+            <h6>Таблицы</h6>
+            <p>col</p>
+            <big>span:</big> Содержит положительное целое число, указывающее количество следующих друг за другом столбцов, которое представляет элемент <big>col</big>.<br>
+
+            <mark>Стиль по умолчанию</mark><br>
+            <code><b>col {<br>
+                    display: table-column;<br>
+                    }</b></code><br>
+            <mark>Пример</mark><br>
+            <code><b>&lt;table border="1"&gt;<br>
+                    &lt;colgroup&gt;<br>
+                    &lt;col span="2" style="background-color: silver"&gt;<br>
+                    &lt;col style="background-color: #66FF99"&gt;<br>
+                    &lt;/colgroup&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;th&gt;ISBN&lt;/th&gt;<br>
+                    &lt;th&gt;Заголовок&lt;/th&gt;<br>
+                    &lt;th&gt;Цена&lt;/th&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;3476896&lt;/td&gt;<br>
+                    &lt;td&gt;Мой первый HTML&lt;/td&gt;<br>
+                    &lt;td&gt;53р&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/table&gt; </b></code><br>
+
+            <table border="1">
+                <colgroup>
+                    <col span="2" style="background-color: silver">
+                    <col style="background-color: #66FF99">
+                </colgroup>
+                <tr>
+                    <th>ISBN</th>
+                    <th>Заголовок</th>
+                    <th>Цена</th>
+                </tr>
+                <tr>
+                    <td>3476896</td>
+                    <td>Мой первый HTML</td>
+                    <td>53р</td>
+                </tr>
+            </table>
+            <hr>
+
+            <p>tbody</p>
+            <big>tbody - </big>должен быть расположен после элементов <big>caption</big> и
+            <big>colgroup</big> (если таковые присутствуют) и <big>thead</big>
+            Элемент <big>tfoot</big> должен быть расположен перед элементом <big>tbody</big> в таблице, чтобы браузер мог отобразить нижний колонтитул перед обработкой всех строк с данными таблицы.<br>
+
+            <mark>Стиль по умолчанию</mark><br>
+            <code><b>tbody {<br>
+                    display: table-row-group;<br>
+                    vertical-align: middle;<br>
+                    border-color: inherit;<br>
+                    } </b></code><br>
+            <mark>Пример</mark><br>
+            <code><b>&lt;table border="1" style="width: 200px;"&gt;<br>
+                    &lt;caption&gt;Ежемесячные сбережения&lt;/caption&gt;<br>
+                    &lt;colgroup&gt;<br>
+                    &lt;col span="1" style="background-color: silver"&gt;<br>
+                    &lt;col style="background-color: #66FF99"&gt;<br>
+                    &lt;/colgroup&gt;<br>
+                    &lt;thead&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;th&gt;Месяц&lt;/th&gt;<br>
+                    &lt;th&gt;Доход&lt;/th&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/thead&gt;<br>
+                    &lt;tfoot&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Сумма&lt;/td&gt;<br>
+                    &lt;td&gt;180р&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/tfoot&gt;<br>
+                    &lt;tbody&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Январь&lt;/td&gt;<br>
+                    &lt;td&gt;100р&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Февраль&lt;/td&gt;<br>
+                    &lt;td&gt;80р&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/tbody&gt;<br>
+                    &lt;/table&gt; </b></code>
+
+            <table border="1" style="width: 200px;">
+                <caption>Ежемесячные сбережения</caption>
+                <colgroup>
+                    <col span="1" style="background-color: silver">
+                    <col style="background-color: #66FF99">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Месяц</th>
+                        <th>Доход</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td>Сумма</td>
+                        <td>180р</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>Январь</td>
+                        <td>100р</td>
+                    </tr>
+                    <tr>
+                        <td>Февраль</td>
+                        <td>80р</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <p>th</p>
+            ячейки добавленные браузером автоматически, для заполнения строки, не имеют собственной рамки, то есть несколько таких ячеек, идущих друг за другом, будут отображаться как одна большая ячейка.<br>
+            <big>colspan:</big><br>
+            Указывает положительное целое число, определяющее сколько столбцов будет охватывать ячейка (по горизонтали). Значение по умолчанию - 1.
+            <big>headers:</big><br>
+            Указывает одну или несколько заголовочных ячеек, связанных с данной ячейкой. В качестве значения атрибута выступает идентификатор или список разделенных пробелами идентификаторов, принадлежащих нужным заголовочным ячейкам.
+            <big>rowspan:</big><br>
+            Указывает положительное целое число, определяющее сколько строк будет охватывать ячейка (по вертикали). Значение по умолчанию - 1.
+            <big>scope:</big><br>
+            Определяет набор ячеек, для которых текущая заголовочная ячейка предоставляет заголовочную информацию. Он может иметь следующие значения:<br>
+            <ul>
+                <li><b>col</b> - заголовок относится ко всем ячейкам в столбце, в котором он определен</li>
+                <li><b>colgroup</b> - заголовок относится к группе столбцов</li>
+                <li><b>row</b> - заголовок относится ко всем ячейкам в строке, в которой он определен</li>
+                <li><b>rowgroup</b> - заголовок относится к группе строк</li>
+            </ul>
+
+            <mark>Стиль по умолчанию</mark><br>
+            <code><b>th {<br>
+                    display: table-cell;<br>
+                    vertical-align: inherit;<br>
+                    font-weight: bold;<br>
+                    text-align: center;<br>
+                    } </b></code><br>
+            <mark>Пример</mark><br>
+            <code><b>&lt;table&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;th&gt;Месяц&lt;/th&gt;<br>
+                    &lt;th&gt;Доход&lt;/th&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Сентябрь&lt;/td&gt;<br>
+                    &lt;td&gt;700р&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/table&gt;</b></code><br>
+            <table>
+                <tr>
+                    <th>Месяц</th>
+                    <th>Доход</th>
+                </tr>
+                <tr>
+                    <td>Сентябрь</td>
+                    <td>700р</td>
+                </tr>
+            </table>
+            <hr>
+
+
+        </div>
+
+        <div class="three">
+
+            <h6>Таблицы</h6>
+            <p>colgroup</p>
+            <big>colgroup - </big>Чтобы определить различные свойства для столбцов в <big>colgroup</big>, используйте тег <big>col</big> в элементе <big>colgroup</big>.<br>
+            <big>span:</big><br>
+            Положительное целое число, указывающее количество следующих друг за другом столбцов, которое представляет элемент <big>colgroup</big>.<br>
+
+            <mark>Стиль по умолчанию</mark><br>
+            <code><b>colgroup {<br>
+                    display: table-column-group;<br>
+                    } </b></code><br>
+            <mark>Пример</mark><br>
+            <code><b>&lt;table border="1"&gt;<br>
+                    &lt;colgroup&gt;<br>
+                    &lt;col span="2" style="background-color: silver"&gt;<br>
+                    &lt;col style="background-color: #66FF99"&gt;<br>
+                    &lt;/colgroup&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;th&gt;ISBN&lt;/th&gt;<br>
+                    &lt;th&gt;Заголовок&lt;/th&gt;<br>
+                    &lt;th&gt;Цена&lt;/th&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;3476896&lt;/td&gt;<br>
+                    &lt;td&gt;Мой первый HTML&lt;/td&gt;<br>
+                    &lt;td&gt;53р&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/table&gt; </b></code><br>
+            <table border="1">
+                <colgroup>
+                    <col span="2" style="background-color: silver">
+                    <col style="background-color: #66FF99">
+                </colgroup>
+                <tr>
+                    <th>ISBN</th>
+                    <th>Заголовок</th>
+                    <th>Цена</th>
+                </tr>
+                <tr>
+                    <td>3476896</td>
+                    <td>Мой первый HTML</td>
+                    <td>53р</td>
+                </tr>
+            </table>
+
+            <hr>
+
+            <p>td</p><br>
+            Содержимым тега <big>td</big> может являться любой HTML-элемент, который можно поместить в тело документа: текст, формы, изображения, таблицы.<br>
+
+            Стоит обратить внимание, что все строки таблицы содержат одинаковое количество ячеек, которое равно количеству ячеек самой длинной строки. Если в строке оказывается меньше ячеек, чем в других строках, то браузер автоматически помещает пустые ячейки в конец строки, таким образом заполняя ее. В случае необходимости размещения пустой ячейки в начале или середине строки, для обозначения отсутствия данных, нужно создать ячейку без содержимого в нужном месте.<br>
+
+            Примечание: обратите внимание, что ячейки, которые браузер добавляет автоматически, не имеют рамки, то есть в случае следования таких ячеек друг за другом, они будут отображаться в виде одной объединенной ячейки.<br>
+
+            <big>colspan:</big><br>
+            Указывает положительное целое число, определяющее сколько столбцов будет охватывать ячейка (по горизонтали). Значение по умолчанию - 1.<br>
+            <mark>Пример</mark>
+
+
+            <head>
+                <style>
+                    table,
+                    th,
+                    td {
+                        border: 1px solid grey;
+                    }
+                </style>
+            </head>
+
+            <body>
+
+                <table>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                    </tr>
+                    <tr>
+                        <td>Мегги</td>
+                        <td>Симпсон</td>
+                    </tr>
+                    <tr>
+                        <td>Лиза</td>
+                        <td>Симпсон</td>
+                    </tr>
+                    <tr>
+                        <td>Барт</td>
+                        <td>Симпсон</td>
+                    </tr>
+                    <tr>
+                        <td>Мардж</td>
+                        <td>Симпсон</td>
+                    </tr>
+                    <tr>
+                        <td>Гомер</td>
+                        <td>Симпсон</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Семья состоит из 5 человек</td>
+                    </tr>
+                </table>
+
+            </body>
+
+            <big>headers:</big><br>
+            Указывает одну или несколько заголовочных ячеек, связанных с данной ячейкой. В качестве значения атрибута выступает идентификатор или список разделенных пробелами идентификаторов, принадлежащих нужным заголовочным ячейкам.<br>
+
+            <mark>Пример</mark>
+
+            <head>
+                <style>
+                    table,
+                    th,
+                    td {
+                        border: 1px solid grey;
+                    }
+                </style>
+            </head>
+
+            <body>
+
+                <table style="border: 1px solid grey;">
+                    <tr>
+                        <th id="name">Имя</th>
+                        <th id="email">Email</th>
+                        <th id="phone">Телефон</th>
+                        <th id="addr">Адрес</th>
+                    </tr>
+                    <tr>
+                        <td headers="name">Лиза</td>
+                        <td headers="email">lisa_simpson@ex.com</td>
+                        <td headers="phone">555-44-77</td>
+                        <td headers="addr">Спрингфилд, Вечнозеленый бульвар, д742</td>
+                    </tr>
+                </table>
+
+            </body>
+
+
+
+            <big>rowspan:</big><br>
+            Указывает положительное целое число, определяющее сколько строк будет охватывать ячейка (по вертикали). Значение по умолчанию - 1.<br>
+            <mark>Пример</mark>
+
+
+            <head>
+                <style>
+                    table,
+                    th,
+                    td {
+                        border: 1px solid grey;
+                    }
+                </style>
+            </head>
+
+            <body>
+
+                <table style="border: 1px solid grey;">
+                    <tr>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Общее количество человек</th>
+                    </tr>
+                    <tr>
+                        <td>Лиза</td>
+                        <td>Симпсон</td>
+                        <td rowspan="2">2</td>
+                    </tr>
+                    <tr>
+                        <td>Барт</td>
+                        <td>Симпсон</td>
+                    </tr>
+                </table>
+
+            </body>
+
+            <mark>Стиль по умолчанию</mark><br>
+            <code><b>td {<br>
+                    display: table-cell;<br>
+                    vertical-align: inherit;<br>
+                    } </b></code><br>
+
+            <mark>Пример</mark><br>
+            <code><b>&lt;table&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Ячейка 1&lt;/td&gt;<br>
+                    &lt;td&gt;Ячейка 2&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/table&gt;</b></code>
+            <table>
+                <tr>
+                    <td>Ячейка 1</td>
+                    <td>Ячейка 2</td>
+                </tr>
+            </table>
+            <hr>
+
+            <p>thead</p>
+            <big>thead - </big>Браузеры могут использовать эти элементы для включения прокрутки тела таблицы, независимо от заголовка и нижнего колонтитула. Так же при выводе на печать большой таблицы, которая занимает несколько страниц, эти элементы могут включить заголовок и нижний колонтитул, которые будут напечатаны в верхней и нижней части каждой страницы.<br>
+            Элемент <big>thead</big> должен быть расположен после элементов <big>caption</big> и <big>colgroup</big> (если таковые присутствуют), но до элементов<big>tbody</big> и <big>tfoot</big>.<br>
+
+            <mark>Стиль по умолчанию</mark><br>
+            <code><b>thead {<br>
+                    display: table-header-group;<br>
+                    vertical-align: middle;<br>
+                    border-color: inherit;<br>
+                    } </b></code><br>
+            <mark>Пример</mark><br>
+            <code><b>&lt;table border="1" style="width: 200px;"&gt;<br>
+                    &lt;caption&gt;Ежемесячные сбережения&lt;/caption&gt;<br>
+                    &lt;colgroup&gt;<br>
+                    &lt;col span="1" style="background-color: silver"&gt;<br>
+                    &lt;col style="background-color: #66FF99"&gt;<br>
+                    &lt;/colgroup&gt;<br>
+                    &lt;thead&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;th&gt;Месяц&lt;/th&gt;<br>
+                    &lt;th&gt;Доход&lt;/th&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/thead&gt;<br>
+                    &lt;tfoot&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Сумма&lt;/td&gt;<br>
+                    &lt;td&gt;180р&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/tfoot&gt;<br>
+                    &lt;tbody&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Январь&lt;/td&gt;<br>
+                    &lt;td&gt;100р&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;tr&gt;<br>
+                    &lt;td&gt;Февраль&lt;/td&gt;<br>
+                    &lt;td&gt;80р&lt;/td&gt;<br>
+                    &lt;/tr&gt;<br>
+                    &lt;/tbody&gt;<br>
+                    &lt;/table&gt; </b></code>
+            
+            <table border="1" style="width: 200px;">
+                <caption>Ежемесячные сбережения</caption>
+                <colgroup>
+                    <col span="1" style="background-color: silver">
+                    <col style="background-color: #66FF99">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Месяц</th>
+                        <th>Доход</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td>Сумма</td>
+                        <td>180р</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>Январь</td>
+                        <td>100р</td>
+                    </tr>
+                    <tr>
+                        <td>Февраль</td>
+                        <td>80р</td>
+                    </tr>
+                </tbody>
+            </table><hr>
 
         </div>
 
     </div>
-</body>
-
-</html>
+</body></html>
