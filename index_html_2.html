@@ -20,6 +20,59 @@
 
         <div class="one">
             <h6>Интерактивные элементы</h6>
+
+
+            <p>menu</p>
+            <big>label:</big><br>
+            Определяет видимую метку для меню.<br>
+            <big>type:</big><br>
+            Определяет какой тип меню будет отображен на экране:<br>
+            <b>context</b> - контекстное меню с командами, с которомы может взаимодействовать пользователь.<br>
+            <b>toolbar</b> - список активных команд<br>
+            <b>list</b> - неупорядоченный список элементов (каждый элемент такого списка создается с помощью тега li). Значение list используется по умолчанию.<br>
+
+            <mark>Стиль по умолчанию</mark><br>
+            <code><b>menu {<br>
+                    display: block;<br>
+                    list-style-type: disc;<br>
+                    margin-top: 1em;<br>
+                    margin-bottom: 1em;
+                    margin-left: 0;<br>
+                    margin-right: 0;<br>
+                    padding-left: 40px;<br>
+                    } </b>
+            </code><br>
+
+            <mark>Пример</mark><br>
+            <code>&lt;menu type="toolbar"&gt;<br>
+                &lt;li&gt;<br>
+                &lt;menu label="File"&gt;
+                &lt;button type="button" onclick="file_new()"&gt;Новый...&lt;/button&gt;<br>
+                &lt;button type="button" onclick="file_open()"&gt;Открыть...&lt;/button&gt;<br>
+                &lt;button type="button" onclick="file_save()"&gt;Сохранить&lt;/button&gt;<br>
+                &lt;/menu&gt;<br>
+                &lt;/li&gt;<br>
+                &lt;li&gt;<br>
+                &lt;menu label="Edit"&gt;<br>
+                &lt;button type="button" onclick="edit_cut()"&gt;Вырезать&lt;/button&gt;<br>
+                &lt;button type="button"<br> onclick="edit_copy()"&gt;Скопировать&lt;/button&gt;<br>
+                &lt;button type="button" onclick="edit_paste()"&gt;Вставить&lt;/button&gt;<br>
+                &lt;/menu&gt;<br>
+                &lt;/li&gt;<br>
+                &lt;/menu&gt; </code>
+            <hr>
+
+
+
+
+
+
+
+        </div>
+
+        <div class="two">
+            <h6>Интерактивные элементы</h6>
+
             <p>details</p>
             <big>open: </big>
             Указывает, что содержимое тега изначально должно быть показано в развернутом виде.<br>
@@ -32,18 +85,14 @@
             <code><b>&lt;details open="open"&gt;<br>
                     &lt;summary&gt;Тут что-то есть.&lt;/summary&gt;<br>
                     &lt;p&gt; - Здесь могло быть, что-нибудь интересное.&lt;/p&gt;<br>
-                    &lt;/details&gt;</b></code><hr>
+                    &lt;/details&gt;</b></code>
+            <hr>
 
-            <p>menu</p>
-            <big>label:</big><br>
-            Определяет видимую метку для меню.<br>
-            <big>type:</big><br>
-            Определяет какой тип меню будет отображен на экране:<br>
-            <b>context</b> - контекстное меню с командами, с которомы может взаимодействовать пользователь.<br>
-            <b>toolbar</b> - список активных команд<br>
-            <b>list</b> - неупорядоченный список элементов (каждый элемент такого списка создается с помощью тега li). Значение list используется по умолчанию.<br><hr>
+        </div>
 
-            
+        <div class="three">
+
+            <h6>Интерактивные элементы</h6>
 
             <p>summary</p>
             Тег <big>summary</big> должен идти первым внутри элемента <big>details</big>.<br>
@@ -56,44 +105,10 @@
             <code><b>&lt;details open="open"&gt;<br>
                     &lt;summary&gt;Тут что-то есть.&lt;/summary&gt;<br>
                     &lt;p&gt; - Здесь могло быть, что-нибудь интересное.&lt;/p&gt;<br>
-                    &lt;/details&gt;</b></code><hr>
+                    &lt;/details&gt;</b></code>
+            <hr>
 
-
-        </div>
-        
-        <div class="two">
-            
-            <mark>Стиль по умолчанию</mark><br>
-            <code><b>menu {<br>
-                    display: block;<br>
-                    list-style-type: disc;<br>
-                    margin-top: 1em;<br>
-                    margin-bottom: 1em;<br>
-                    margin-left: 0;<br>
-                    margin-right: 0;<br>
-                    padding-left: 40px;<br>
-                    } </b></code><br>
-            <mark>Пример</mark><br>
-            <code><b>&lt;menu type="toolbar"&gt;<br>
-                    &lt;li&gt;<br>
-                    &lt;menu label="File"&gt;<br>
-                    &lt;button type="button"<br> onclick="file_new()"&gt;Новый...&lt;/button&gt;<br>
-                    &lt;button type="button"<br> onclick="file_open()"&gt;Открыть...&lt;/button&gt;<br>
-                    &lt;button type="button"<br> onclick="file_save()"&gt;Сохранить&lt;/button&gt;<br>
-                    &lt;/menu&gt;<br>
-                    &lt;/li&gt;<br>
-                    &lt;li&gt;<br>
-                    &lt;menu label="Edit"&gt;<br>
-                    &lt;button type="button"<br> onclick="edit_cut()"&gt;Вырезать&lt;/button&gt;<br>
-                    &lt;button type="button"<br> onclick="edit_copy()"&gt;Скопировать&lt;/button&gt;<br>
-                    &lt;button type="button"<br> onclick="edit_paste()"&gt;Вставить&lt;/button&gt;<br>
-                    &lt;/menu&gt;<br>
-                    &lt;/li&gt;<br>
-                    &lt;/menu&gt; </b></code><hr>
-            
         </div>
 
     </div>
-</body>
-
-</html>
+</body></html>
