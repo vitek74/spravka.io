@@ -1,0 +1,59 @@
+.section {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.section__item {
+  scroll-snap-align: start;
+}
+
+.Item1 {
+    width: 200px;
+    height: 200px;
+    background-color: #FF0000;
+    
+}
+
+.Item2 {
+    background: #00FF00;
+    
+}
+
+.Item3 {
+    background: #FFD700;
+    
+}
+
+.Item4 {
+    background: #4682B4;
+    
+}
+
+.Item5 {
+    background: #000080;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
