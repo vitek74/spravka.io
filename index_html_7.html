@@ -18,98 +18,79 @@
             <h1>Атрибуты</h1>
         </header>
 
-        <div class="one">
+        <div class="one_7">
+            <!--Полоса прокрутки-->
+            <div class="over">
 
-            <h6>Форма</h6>
+                <h6>Форма</h6>
 
-            <p>button</p>
-            Когда браузер отображает элемент <big>button</big> на веб-странице, то весь элемент со <br>
-            всем его содержимым становится одной активной кнопкой. <br>
-            По умолчанию он будет иметь такой же внешний вид, как и кнопка, созданная с помощью <big>input type="button"</big>,<br> но из-за возможности содержать другие HTML-элементы он имеет гораздо больше возможностей для применения к нему CSS стилей.<br>
+                <p>button:</p>
+                Когда браузер отображает элемент <big>button</big> на веб-странице, то весь элемент со <br>
+                всем его содержимым становится одной активной кнопкой. <br>
+                По умолчанию он будет иметь такой же внешний вид, как и кнопка, созданная с помощью <big>input type="button"</big>,<br> но из-за возможности содержать другие HTML-элементы он имеет гораздо больше возможностей для применения к нему CSS стилей.<br>
 
-            <big>autofocus:</big><br>
-            Указывает браузеру, что кнопка должна получить фокус после загрузки страницы.<br> Значения для логического атрибута autofocus можно задавать следующими способами:<br>
-            <mark>Пример autofocus:</mark><br>
-            <code><b>&lt;button autofocus&gt;&lt;/button&gt;<br>
-                    &lt;button autofocus="autofocus"&gt;&lt;/button&gt;<br>
-                    &lt;button autofocus=""&gt;&lt;/button&gt;</b></code><br>
+                <big>autofocus:</big><br>
+                Указывает браузеру, что кнопка должна получить фокус после загрузки страницы.<br> Значения для логического атрибута autofocus можно задавать следующими способами:<br>
+                <mark>Пример autofocus:</mark><br>
+                <code><b>&lt;button autofocus&gt;&lt;/button&gt;<br>
+                        &lt;button autofocus="autofocus"&gt;&lt;/button&gt;<br>
+                        &lt;button autofocus=""&gt;&lt;/button&gt;</b></code><br>
 
-            <big>disabled:</big><br>
-            Отключает возможность нажатия кнопки. Это можно использовать в случае, когда<br>
-            кнопка должна стать активной при выполнение определенных условий (например, при выборе флажка и тд.), <br>
-            сделать кнопку активной можно будет с помощью JavaScript. <br>
-            Значения для логического атрибута disabled можно задавать следующими способами:<br>
-            <mark>Пример disabled:</mark><br>
-            <code><b>&lt;button disabled&gt;&lt;/button&gt;<br>
-                    &lt;button disabled="disabled"&gt;&lt;/button&gt;<br>
-                    &lt;button disabled=""&gt;&lt;/button&gt;</b></code><br>
+                <big>disabled:</big><br>
+                Отключает возможность нажатия кнопки. Это можно использовать в случае, когда<br>
+                кнопка должна стать активной при выполнение определенных условий (например, при выборе флажка и тд.), <br>
+                сделать кнопку активной можно будет с помощью JavaScript. <br>
+                Значения для логического атрибута disabled можно задавать следующими способами:<br>
+                <mark>Пример disabled:</mark><br>
+                <code><b>&lt;button disabled&gt;&lt;/button&gt;<br>
+                        &lt;button disabled="disabled"&gt;&lt;/button&gt;<br>
+                        &lt;button disabled=""&gt;&lt;/button&gt;</b></code><br>
 
-            <big>form:</big><br>
-            Указывает к какой форме относится данная кнопка.<br>
-            В качестве значения выступает один или несколько идентификаторов форм,<br> разделенных пробелами. <br>
-            Количество идентификаторов в значении атрибута зависит от количества принадлежащих кнопке форм:<br>
-            <mark>Пример form:</mark><br>
-            <code><b>
-                    &lt;!DOCTYPE html&gt;<br>
-                    &lt;form action="demo_form.html" method="get" id="nameform"&gt;<br>
-                    Имя: &lt;input type="text" name="fname"&gt;&lt;br&gt;<br>
-                    Фамилия: &lt;input type="text" name="lname"&gt;<br>
-                    &lt;/form&gt;<br>
-
-                    &lt;p&gt;Кнопка находится вне элемента form, но является частью
-                    формы.&lt;/p&gt;<br>
-
-                    &lt;button type="submit" form="nameform" <br>
-                    value="Submit"&gt;Отправить&lt;/button&gt;<br>
-                </b></code><br>
-
-            <big>formaction:</big><br>
-            Определяет адрес, куда пересылаются данные формы при нажатии на кнопку.<br> Если для формы указан атрибут action, то атрибут formaction переопределит его значение:<br>
-            <mark>Пример formaction</mark><br>
-            <code><b>&lt;!DOCTYPE html&gt;<br>
-                    &lt;form action="demo_form.asp" method="get"&gt;<br>
-                    Имя: &lt;input type="text" name="fname"&gt;&lt;br&gt;<br>
-                    Фамилия: &lt;input type="text" name="lname"&gt;&lt;br&gt;<br>
-                    &lt;button type="submit"&gt;Отправить&lt;/button&gt;&lt;br&gt;<br>
-                    &lt;button type="submit" formaction="demo_admin.html"&gt;<br>
-                    Отправить от имени администратора<br>
-                    &lt;/button&gt;<br>
-                    &lt;/form&gt;<br>
-                </b></code>
-
-            <big>formenctype:</big><br>
-            Указывает, каким способом данные формы должны быть закодированы перед отправкой на сервер.<br>
-            Используется только для кнопок с атрибутом type="submit". Возможные значения атрибута:<br>
-            <ul>
-                <li><b>application/x-www-form-urlencoded</b> - все символы кодируются перед отправкой (значение по умолчанию).</li>
-                <li><b>multipart/form-data</b> - символы не кодируются (этот метод используется при использовании форм, которые имеют файл управления загрузкой).</li>
-                <li><b>text/plain</b> - пробелы преобразуются в символ "+", но символы не кодируются.</li>
-            </ul>
-            <mark>Пример formenctype:</mark><br>
-            <code><b>&lt;!DOCTYPE html&gt;<br>
-                    &lt;html&gt;<br>
-                    &lt;body&gt;<br>
-                    &lt;form action="demo_form.asp" method="get"&gt;<br>
-                    Имя: &lt;input type="text" name="fname"&gt;&lt;br&gt;<br>
-                    Фамилия: &lt;input type="text" name="lname"&gt;&lt;br&gt;<br>
-                    &lt;button type="submit" &gt;Отправить&lt;/button&gt;<br>
-                    &lt;button type="submit" formmethod="post"<br> formaction="demo_post.asp"&gt;<br>
-                    Отправить используя POST<br>
-                    &lt;/button&gt;<br>
-                    &lt;/form&gt;<br>
-                    &lt;/body&gt;<br>
-                    &lt;/html&gt;</b></code><br>
-
-            <big>formmethod:</big><br>
-            Указывает, какой метод HTTP будет использован при отправке данных формы.<br> Используется только для кнопок с атрибутом type="submit".<br>
-            Возможные значения атрибута:<br>
-            <dd>Указывает, какой метод HTTP будет использован при отправке данных формы. Используется только для кнопок с атрибутом type="submit". Возможные значения атрибута:
-                <ul>
-                    <li><b>get</b> - данные формы добавляются в конце URL-адреса: URL-адрес?имя=значение?имя=значение</li>
-                    <li><b>post</b> - отправляет данные формы, как HTTP после транзакции</li>
-                </ul>
-                <mark>Пример formmethod:</mark>
+                <big>form:</big><br>
+                Указывает к какой форме относится данная кнопка.<br>
+                В качестве значения выступает один или несколько идентификаторов форм,<br> разделенных пробелами. <br>
+                Количество идентификаторов в значении атрибута зависит от количества принадлежащих кнопке форм:<br>
+                <mark>Пример form:</mark><br>
                 <code><b>
+                        &lt;!DOCTYPE html&gt;<br>
+                        &lt;form action="demo_form.html" method="get" id="nameform"&gt;<br>
+                        Имя: &lt;input type="text" name="fname"&gt;&lt;br&gt;<br>
+                        Фамилия: &lt;input type="text" name="lname"&gt;<br>
+                        &lt;/form&gt;<br>
+
+                        &lt;p&gt;Кнопка находится вне элемента form, но является частью
+                        формы.&lt;/p&gt;<br>
+
+                        &lt;button type="submit" form="nameform" <br>
+                        value="Submit"&gt;Отправить&lt;/button&gt;<br>
+                    </b></code><br>
+
+                <big>formaction:</big><br>
+                Определяет адрес, куда пересылаются данные формы при нажатии на кнопку.<br> Если для формы указан атрибут action, то атрибут formaction переопределит его значение:<br>
+                <mark>Пример formaction</mark><br>
+                <code><b>&lt;!DOCTYPE html&gt;<br>
+                        &lt;form action="demo_form.asp" method="get"&gt;<br>
+                        Имя: &lt;input type="text" name="fname"&gt;&lt;br&gt;<br>
+                        Фамилия: &lt;input type="text" name="lname"&gt;&lt;br&gt;<br>
+                        &lt;button type="submit"&gt;Отправить&lt;/button&gt;&lt;br&gt;<br>
+                        &lt;button type="submit" formaction="demo_admin.html"&gt;<br>
+                        Отправить от имени администратора<br>
+                        &lt;/button&gt;<br>
+                        &lt;/form&gt;<br>
+                    </b></code>
+
+                <big>formenctype:</big><br>
+                Указывает, каким способом данные формы должны быть закодированы перед отправкой на сервер.<br>
+                Используется только для кнопок с атрибутом type="submit". Возможные значения атрибута:<br>
+                <ul>
+                    <li><b>application/x-www-form-urlencoded</b> - все символы кодируются перед отправкой (значение по умолчанию).</li>
+                    <li><b>multipart/form-data</b> - символы не кодируются (этот метод используется при использовании форм, которые имеют файл управления загрузкой).</li>
+                    <li><b>text/plain</b> - пробелы преобразуются в символ "+", но символы не кодируются.</li>
+                </ul>
+                <mark>Пример formenctype:</mark><br>
+                <code><b>&lt;!DOCTYPE html&gt;<br>
+                        &lt;html&gt;<br>
+                        &lt;body&gt;<br>
                         &lt;form action="demo_form.asp" method="get"&gt;<br>
                         Имя: &lt;input type="text" name="fname"&gt;&lt;br&gt;<br>
                         Фамилия: &lt;input type="text" name="lname"&gt;&lt;br&gt;<br>
@@ -118,78 +99,172 @@
                         Отправить используя POST<br>
                         &lt;/button&gt;<br>
                         &lt;/form&gt;<br>
-                    </b></code>
+                        &lt;/body&gt;<br>
+                        &lt;/html&gt;</b></code><br>
 
-                <big>formnovalidate:</big><br>
-                Указывает, что данные формы не будут проверяться на корректность.<br> Используется только для кнопок с атрибутом type="submit".<br>
-                Значения для логического атрибута autofocus можно задавать следующими способами:<br>
-                <code><b>
-                        <mark>Пример formnovalidate:</mark>
-                        &lt;button formnovalidate&gt;&lt;/button&gt;<br>
-                        &lt;button formnovalidate="formnovalidate"&gt;&lt;/button&gt;<br>
-                        &lt;button formnovalidate=""&gt;&lt;/button&gt;<br>
-                    </b></code>
+                <big>formmethod:</big><br>
+                Указывает, какой метод HTTP будет использован при отправке данных формы.<br> Используется только для кнопок с атрибутом type="submit".<br>
+                Возможные значения атрибута:<br>
+                <dd>Указывает, какой метод HTTP будет использован при отправке данных формы. Используется только для кнопок с атрибутом type="submit". Возможные значения атрибута:
+                    <ul>
+                        <li><b>get</b> - данные формы добавляются в конце URL-адреса: URL-адрес?имя=значение?имя=значение</li>
+                        <li><b>post</b> - отправляет данные формы, как HTTP после транзакции</li>
+                    </ul>
+                    <mark>Пример formmethod:</mark>
+                    <code><b>
+                            &lt;form action="demo_form.asp" method="get"&gt;<br>
+                            Имя: &lt;input type="text" name="fname"&gt;&lt;br&gt;<br>
+                            Фамилия: &lt;input type="text" name="lname"&gt;&lt;br&gt;<br>
+                            &lt;button type="submit" &gt;Отправить&lt;/button&gt;<br>
+                            &lt;button type="submit" formmethod="post"<br> formaction="demo_post.asp"&gt;<br>
+                            Отправить используя POST<br>
+                            &lt;/button&gt;<br>
+                            &lt;/form&gt;<br>
+                        </b></code>
 
-                <big>formtarget:</big><br>
-                Указывает, где будет отображен ответ после отправки формы.<br>
-                Используется только для кнопок с атрибутом type="submit". Возможные значения атрибута:<br>
+                    <big>formnovalidate:</big><br>
+                    Указывает, что данные формы не будут проверяться на корректность.<br> Используется только для кнопок с атрибутом type="submit".<br>
+                    Значения для логического атрибута autofocus можно задавать следующими способами:<br>
+                    <code><b>
+                            <mark>Пример formnovalidate:</mark>
+                            &lt;button formnovalidate&gt;&lt;/button&gt;<br>
+                            &lt;button formnovalidate="formnovalidate"&gt;&lt;/button&gt;<br>
+                            &lt;button formnovalidate=""&gt;&lt;/button&gt;<br>
+                        </b></code>
 
-            <dd>Указывает, где будет отображен ответ после отправки формы. Используется только для кнопок с атрибутом type="submit". Возможные значения атрибута:
-                <ul>
-                    <li><b>_blank</b> - открывает ответ в новом окне или вкладке.</li>
-                    <li><b>_self</b> - открывает ответ в той же директории, где располагается ссылка (значение по умолчанию).</li>
-                    <li><b>_parent</b> - открывает ответ в родительском окне.</li>
-                    <li><b>_top</b> - открывает ответ во всю ширину окна.</li>
-                    <li><b>имя_фрейма</b> - открывает ответ в iframe, имя которого было указано в качестве значения.</li>
-                </ul>
-                <mark>Пример formtarget:</mark><br>
-                <code><b>
-                        &lt;form action="demo_form.asp" method="get"&gt;<br>
-                        Имя: &lt;input type="text" name="fname"&gt;&lt;br&gt;<br>
-                        Фамилия: &lt;input type="text" name="lname"&gt;&lt;br&gt;<br>
-                        &lt;button type="submit"&gt;Отправить&lt;/button&gt;<br>
-                        &lt;button type="submit" formtarget="_blank"&gt;<br>
-                        Оправить и открыть ответ в новом окне<br>
-                        &lt;/button&gt;<br>
-                        &lt;/form><br>
+                    <big>formtarget:</big><br>
+                    Указывает, где будет отображен ответ после отправки формы.<br>
+                    Используется только для кнопок с атрибутом type="submit". Возможные значения атрибута:<br>
 
-                    </b></code>
+                <dd>Указывает, где будет отображен ответ после отправки формы. Используется только для кнопок с атрибутом type="submit". Возможные значения атрибута:
+                    <ul>
+                        <li><b>_blank</b> - открывает ответ в новом окне или вкладке.</li>
+                        <li><b>_self</b> - открывает ответ в той же директории, где располагается ссылка (значение по умолчанию).</li>
+                        <li><b>_parent</b> - открывает ответ в родительском окне.</li>
+                        <li><b>_top</b> - открывает ответ во всю ширину окна.</li>
+                        <li><b>имя_фрейма</b> - открывает ответ в iframe, имя которого было указано в качестве значения.</li>
+                    </ul>
+                    <mark>Пример formtarget:</mark><br>
+                    <code><b>
+                            &lt;form action="demo_form.asp" method="get"&gt;<br>
+                            Имя: &lt;input type="text" name="fname"&gt;&lt;br&gt;<br>
+                            Фамилия: &lt;input type="text" name="lname"&gt;&lt;br&gt;<br>
+                            &lt;button type="submit"&gt;Отправить&lt;/button&gt;<br>
+                            &lt;button type="submit" formtarget="_blank"&gt;<br>
+                            Оправить и открыть ответ в новом окне<br>
+                            &lt;/button&gt;<br>
+                            &lt;/form><br>
 
-                <big>name:</big><br>
-                Указывает имя для элемента <big>button</big>.<br>
-                Он используется для ссылки на данные формы после ее отправки, или для ссылки на элемент в JavaScript.<br>
-                <code><b>
-                        <mark>Пример name</mark><br>
-                        &lt;form action="demo_form.asp" method="get"&gt;<br>
-                        Выберите одно из двух:<br>
-                        &lt;button name="subject" type="submit"<br> value="HTML"&gt;HTML&lt;/button&gt;<br>
-                        &lt;button name="subject" type="submit"<br> value="CSS"&gt;CSS&lt;/button&gt;<br>
-                        &lt;/form&gt;<br>
-                    </b></code>
+                        </b></code>
 
-                <big>type:</big><br>
-            <dd>Определяет тип кнопки:
-                <ul>
-                    <li><b>button</b> - активная кнопка</li>
-                    <li><b>reset</b> - кнопка, очищающая форму от введенных данных</li>
-                    <li><b>submit</b> - кнопка для отправки данных формы (значение по умолчанию)</li>
-                </ul>
-                <mark>Пример type</mark><br>
-                <code><b>
-                        &lt;form action="demo_form.asp" method="get"&gt;<br>
-                        Имя: &lt;input type="text" name="fname"&gt;&lt;br&gt;<br>
-                        Фамилия: &lt;input type="text" name="lname"&gt;&lt;br&gt;<br>
-                        &lt;button type="submit" value="Submit"&gt;Отправить&lt;/button&gt;<br>
-                        &lt;button type="reset" value="Reset"&gt;Стереть&lt;/button&gt;<br>
-                        &lt;/form&gt;<br>
-                    </b></code><hr>
+                    <big>name:</big><br>
+                    Указывает имя для элемента <big>button</big>.<br>
+                    Он используется для ссылки на данные формы после ее отправки, или для ссылки на элемент в JavaScript.<br>
+                    <code><b>
+                            <mark>Пример name</mark><br>
+                            &lt;form action="demo_form.asp" method="get"&gt;<br>
+                            Выберите одно из двух:<br>
+                            &lt;button name="subject" type="submit"<br> value="HTML"&gt;HTML&lt;/button&gt;<br>
+                            &lt;button name="subject" type="submit"<br> value="CSS"&gt;CSS&lt;/button&gt;<br>
+                            &lt;/form&gt;<br>
+                        </b></code>
 
+                    <big>type:</big><br>
+                <dd>Определяет тип кнопки:
+                    <ul>
+                        <li><b>button</b> - активная кнопка</li>
+                        <li><b>reset</b> - кнопка, очищающая форму от введенных данных</li>
+                        <li><b>submit</b> - кнопка для отправки данных формы (значение по умолчанию)</li>
+                    </ul>
+                    <mark>Пример type</mark><br>
+                    <code><b>
+                            &lt;form action="demo_form.asp" method="get"&gt;<br>
+                            Имя: &lt;input type="text" name="fname"&gt;&lt;br&gt;<br>
+                            Фамилия: &lt;input type="text" name="lname"&gt;&lt;br&gt;<br>
+                            &lt;button type="submit" value="Submit"&gt;Отправить&lt;/button&gt;<br>
+                            &lt;button type="reset" value="Reset"&gt;Стереть&lt;/button&gt;<br>
+                            &lt;/form&gt;<br>
+                        </b></code>
+                    <hr>
+
+            </div>
 
         </div>
 
-        <div class="two">
+        <div class="two_7">
 
-            <h6>Форма</h6>
+            <div class="over">
+
+                <h6>Форма</h6>
+
+                <p>datalist:</p>
+
+                <big>datalist -</big><br>
+                используется обычно для "автозаполнения".<br>
+                Изначально этот список скрыт и становится доступным при получении полем фокуса.<br>
+                Используйте список атрибутов элемента <big>input</big>, чтобы использовать его вместе с тегом <big>datalist</big>.<br>
+
+                <mark>Стиль по умолчанию</mark><br>
+                <code><b>datalist {<br>
+                        display: none;<br>
+                        } </b></code><br>
+
+                <mark>Пример</mark><br>
+                <code><b>&lt;input list="browsers"&gt;<br>
+                        &lt;datalist id="browsers"&gt;<br>
+                        &lt;option value="Internet Explorer"&gt;<br>
+                        &lt;option value="Firefox"&gt;<br>
+                        &lt;option value="Google Chrome"&gt;<br>
+                        &lt;option value="Opera"&gt;<br>
+                        &lt;option value="Safari"&gt;<br>
+                        &lt;/datalist> </b></code><br>
+
+                <p>fieldset:</p>
+
+                <big>fieldset -</big><br>
+                Обычно его используют для визуального выделения группы логически связанных между собой элементов формы.<br>
+                Элемент <big>fieldset</big> часто используется совместно с элементом <big>legend</big>, который определяет для него заголовок.<br>
+
+                <big>disabled:</big><br>
+                Указывает, что группа взаимосвязанных элементов формы должна быть отключена. <br>
+                Это можно использовать в случае, когда форма должна стать активной при выполнение определенных условий <br>
+                (например, при выборе флажка и тд.), сделать кнопку активной можно будет с помощью JavaScript.<br>
+
+                <mark>Пример »</mark><br>
+                <code><b>&lt;fieldset disabled&gt;<br>
+                        &lt;fieldset disabled="disabled"&gt;<br>
+                        &lt;fieldset disabled=""&gt;</b></code><br>
+
+                <big>name:</big><br>
+                Указывает имя для группы элементов, объединенных с помощью <big>fieldset</big>.<br>
+                Имена обычно используются в JavaScript для ссылок на элементы или для ссылки на данные формы после ее отправки.<br>
+
+                <mark>Стиль по умолчанию</mark><br>
+                <code><b>fieldset {<br>
+                        display: block;<br>
+                        margin-left: 2px;<br>
+                        margin-right: 2px;<br>
+                        padding-top: 0.35em;<br>
+                        padding-bottom: 0.625em;<br>
+                        padding-left: 0.75em;<br>
+                        padding-right: 0.75em;<br>
+                        border: 2px groove (зависит от браузера);<br>
+                        } </b></code><br>
+
+                <mark>Пример »</mark><br>
+                <code><b>&lt;form&gt;<br>
+                        &lt;fieldset&gt;<br>
+                        &lt;legend&gt;Персональные данные:&lt;/legend&gt;<br>
+                        Имя: &lt;input type="text"&gt;&lt;br&gt;<br>
+                        mail: &lt;input type="text"&gt;&lt;br&gt;<br>
+                        Дата рождения: &lt;input type="text"&gt;<br>
+                        &lt;/fieldset><br>
+                        &lt;/form&gt; </b></code><br>
+
+
+
+            </div>
+
 
         </div>
 
