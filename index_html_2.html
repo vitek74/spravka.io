@@ -6,7 +6,7 @@
     <meta name="yandex-verification" content="cae568b986ed0d2e" />
     <link rel="stylesheet" href="style/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Главная</title>
+    <title>HTML_CSS</title>
 </head>
 
 <body>
@@ -15,105 +15,107 @@
 
         <!--Шапка-->
         <header class="header">
-            <h1>Атрибуты</h1>
+            <big> &emsp;&emsp;MENU: &emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp;  DETAILS: &emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp;  SUMMARY </big>
         </header>
 
         <div class="one">
-            <h6>Интерактивные элементы</h6>
+            <div class="over">
+                <h6>Интерактивные элементы</h6>
 
 
-            <p>menu:</p>
-            
-            <cite>Атрибуты:</cite>
-            
-            <h4>label:</h4><br>
-            Определяет видимую метку для меню.<br>
-            
-            <h4>type:</h4><br>
-            Определяет какой тип меню будет отображен на экране:<br>
-            <b>context</b> - контекстное меню с командами, с которомы может взаимодействовать пользователь.<br>
-            <b>toolbar</b> - список активных команд<br>
-            <b>list</b> - неупорядоченный список элементов (каждый элемент такого списка создается с помощью тега li). Значение list используется по умолчанию.<br>
+                <p>menu:</p>
 
-            <mark>Стиль по умолчанию</mark><br>
-            <code><b>menu {<br>
-                    display: block;<br>
-                    list-style-type: disc;<br>
-                    margin-top: 1em;<br>
-                    margin-bottom: 1em;
-                    margin-left: 0;<br>
-                    margin-right: 0;<br>
-                    padding-left: 40px;<br>
-                    } </b>
-            </code><br>
+                <cite>Атрибуты:</cite>
 
-            <mark>Пример</mark><br>
-            <code>&lt;menu type="toolbar"&gt;<br>
-                &lt;li&gt;<br>
-                &lt;menu label="File"&gt;
-                &lt;button type="button" onclick="file_new()"&gt;Новый...&lt;/button&gt;<br>
-                &lt;button type="button" onclick="file_open()"&gt;Открыть...&lt;/button&gt;<br>
-                &lt;button type="button" onclick="file_save()"&gt;Сохранить&lt;/button&gt;<br>
-                &lt;/menu&gt;<br>
-                &lt;/li&gt;<br>
-                &lt;li&gt;<br>
-                &lt;menu label="Edit"&gt;<br>
-                &lt;button type="button" onclick="edit_cut()"&gt;Вырезать&lt;/button&gt;<br>
-                &lt;button type="button"<br> onclick="edit_copy()"&gt;Скопировать&lt;/button&gt;<br>
-                &lt;button type="button" onclick="edit_paste()"&gt;Вставить&lt;/button&gt;<br>
-                &lt;/menu&gt;<br>
-                &lt;/li&gt;<br>
-                &lt;/menu&gt; </code>
-            <hr>
+                <h4>label:</h4><br>
+                Определяет видимую метку для меню.<br>
 
+                <h4>type:</h4><br>
+                Определяет какой тип меню будет отображен на экране:<br>
+                <b>context</b> - контекстное меню с командами, с которомы может взаимодействовать пользователь.<br>
+                <b>toolbar</b> - список активных команд<br>
+                <b>list</b> - неупорядоченный список элементов (каждый элемент такого списка создается с помощью тега li). Значение list используется по умолчанию.<br>
 
+                <mark>Стиль по умолчанию</mark><br>
+                <code><b>menu {<br>
+                        display: block;<br>
+                        list-style-type: disc;<br>
+                        margin-top: 1em;<br>
+                        margin-bottom: 1em;
+                        margin-left: 0;<br>
+                        margin-right: 0;<br>
+                        padding-left: 40px;<br>
+                        } </b>
+                </code><br>
 
+                <mark>Пример</mark><br>
+                <code>&lt;menu type="toolbar"&gt;<br>
+                    &lt;li&gt;<br>
+                    &lt;menu label="File"&gt;
+                    &lt;button type="button" onclick="file_new()"&gt;Новый...&lt;/button&gt;<br>
+                    &lt;button type="button" onclick="file_open()"&gt;Открыть...&lt;/button&gt;<br>
+                    &lt;button type="button" onclick="file_save()"&gt;Сохранить&lt;/button&gt;<br>
+                    &lt;/menu&gt;<br>
+                    &lt;/li&gt;<br>
+                    &lt;li&gt;<br>
+                    &lt;menu label="Edit"&gt;<br>
+                    &lt;button type="button" onclick="edit_cut()"&gt;Вырезать&lt;/button&gt;<br>
+                    &lt;button type="button"<br> onclick="edit_copy()"&gt;Скопировать&lt;/button&gt;<br>
+                    &lt;button type="button" onclick="edit_paste()"&gt;Вставить&lt;/button&gt;<br>
+                    &lt;/menu&gt;<br>
+                    &lt;/li&gt;<br>
+                    &lt;/menu&gt; </code>
+                <hr>
 
-
+            </div>
 
 
         </div>
 
         <div class="two">
-            <h6>Интерактивные элементы</h6>
 
-            <p>details:</p>
-            
-            <cite>Атрибуты:</cite><br>
-            <h4>open:</h4>
-            Указывает, что содержимое тега изначально должно быть показано в развернутом виде.<br>
+            <div class="over">
+                <h6>Интерактивные элементы</h6>
 
-            <mark>Стиль по умолчанию</mark><br>
-            <code><b>details {<br>
-                    display: block;<br>
-                    } </b></code><br>
-            <mark>Пример</mark><br>
-            <code><b>&lt;details open="open"&gt;<br>
-                    &lt;summary&gt;Тут что-то есть.&lt;/summary&gt;<br>
-                    &lt;p&gt; - Здесь могло быть, что-нибудь интересное.&lt;/p&gt;<br>
-                    &lt;/details&gt;</b></code>
-            <hr>
+                <p>details:</p>
 
+                <cite>Атрибуты:</cite><br>
+                <h4>open:</h4>
+                Указывает, что содержимое тега изначально должно быть показано в развернутом виде.<br>
+
+                <mark>Стиль по умолчанию</mark><br>
+                <code><b>details {<br>
+                        display: block;<br>
+                        } </b></code><br>
+                <mark>Пример</mark><br>
+                <code><b>&lt;details open="open"&gt;<br>
+                        &lt;summary&gt;Тут что-то есть.&lt;/summary&gt;<br>
+                        &lt;p&gt; - Здесь могло быть, что-нибудь интересное.&lt;/p&gt;<br>
+                        &lt;/details&gt;</b></code>
+                <hr>
+            </div>
         </div>
 
         <div class="three">
 
-            <h6>Интерактивные элементы</h6>
+            <div class="over">
 
-            <p>summary:</p>
-            Тег <big>summary</big> должен идти первым внутри элемента <b>details</b>.<br>
+                <h6>Интерактивные элементы</h6>
 
-            <mark>Стиль по умолчанию</mark><br>
-            <code><b>summary {<br>
-                    display: block;<br>
-                    }</b></code><br>
-            <mark>Пример</mark><br>
-            <code><b>&lt;details open="open"&gt;<br>
-                    &lt;summary&gt;Тут что-то есть.&lt;/summary&gt;<br>
-                    &lt;p&gt; - Здесь могло быть, что-нибудь интересное.&lt;/p&gt;<br>
-                    &lt;/details&gt;</b></code>
-            <hr>
+                <p>summary:</p>
+                Тег <big>summary</big> должен идти первым внутри элемента <b>details</b>.<br>
 
+                <mark>Стиль по умолчанию</mark><br>
+                <code><b>summary {<br>
+                        display: block;<br>
+                        }</b></code><br>
+                <mark>Пример</mark><br>
+                <code><b>&lt;details open="open"&gt;<br>
+                        &lt;summary&gt;Тут что-то есть.&lt;/summary&gt;<br>
+                        &lt;p&gt; - Здесь могло быть, что-нибудь интересное.&lt;/p&gt;<br>
+                        &lt;/details&gt;</b></code>
+                <hr>
+            </div>
         </div>
 
     </div>
