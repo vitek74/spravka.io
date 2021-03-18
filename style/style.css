@@ -63,9 +63,17 @@ cite {
     background: #AFEEEE;
     color: #000000;
     font-size: 24px;
+}
 
-
-
+.menu_css {
+    width: 25%;
+    height:100%;
+    position: fixed;
+    overflow: auto;
+    float: left;
+    background: #AFEEEE;
+    color: #000000;
+    font-size: 24px;
 }
 
 .content {
